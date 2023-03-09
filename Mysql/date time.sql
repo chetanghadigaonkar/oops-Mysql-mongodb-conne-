@@ -1,0 +1,12 @@
+use intro_sql;
+drop table transacation_details;
+select * from transacation_details;
+select prod_name,prod_id,datediff(sysdate(),order_date) as datedifference,order_date from transacation_details;
+select date_format('2017-06-15','%Y');
+select date_format(order_date,'%d'),order_date from transacation_details;
+select date_format(order_date,'%m'),order_date from transacation_details;
+select date_format(order_date,'%y'),order_date from transacation_details;
+select day(order_date),order_date from transacation_details;
+select quarter(order_date),order_date from transacation_details;
+select subdate('2017-05-15',interval 2 day),adddate('2017-05-15',interval 2 day);
+select subdate('2017-05-15',interval -2 day),adddate('2017-05-15',interval 2 day);
